@@ -78,7 +78,7 @@ module.exports = function (grunt) {
 
             var renamedPath = getRename(realPath, path.dirname(_path));
             var relativePath = path.relative(
-                path.dirname(f.src), path.dirname(realPath)
+                path.dirname(f.src[0]), path.dirname(realPath)
             );
 
             tasks[realPath] = path.normalize(
